@@ -1,0 +1,9 @@
+.work {
+    width: 100%;
+    background-color: #111215;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+    flex-direction: column;
+}

@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=Anuphan:wght@500;600&family=Laila:wght@400;500;600&family=Macondo+Swash+Caps&family=Poppins:wght@100&display=swap');
+
+
+:root {
+    --blue: #6da2d4;
+    --bg-color: #111215;
+  }
+  
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 4rem;
+    padding: 40px 0;
+    border-radius: 0 0 10px 10px;
+}
+
+
+
+/* hamburger css animation */
+
+
+
+.menu_icon {
+    display: none;
+}
+
+@media only screen and (max-width:600px) {
+    .menu_icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    svg {
+        cursor: pointer;
+
+    }
+
+    svg rect {
+        transition: all 0.3s ease;
+    }
+
+    .top_active{
+        transform: rotate(45deg);
+        transform-origin: center top;
+        x: 50px;
+        y: 35px;
+    }
+    .middle_active{
+        opacity: 0;
+    }
+    .bottom_active{
+        transform: rotate(-45deg);
+        transform-origin: center top;
+        x: -18px;
+        y: 25px;
+    }
+    
+}
+
+
+/* animation on hover ended
+ */
+
+
+
+.navbar .logo {
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    width: 4rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: border 0.7s ease;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    padding: 0 1rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.navbar ul li a{
+    text-decoration: none;   
+    color: #fff;
+
+}
+
+.navbar ul li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width .3s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+body {
+    text-align: center;
+    background-color: var(--bg-color);
+    color: rgb(255, 255, 255);
+    font-family: 'laila', sans-serif;
+    background-size: cover;
+    margin-left: 40px;
+    margin-right: 40px;
+ 
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.main {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 70vh;
+
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.poster_boy{
+    display: flex;
+    place-items: center;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    width: 700px;
+    height: 500px;
+    background-color: black;
+    border: 0.2rem solid #fff;
+}
+
+.main h1 {
+    font-size: 7rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    font-family: 'Macondo Swash Caps', sans-serif;
+}
+
+.text{
+    gap: 20px;
+}
+
+.name {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: first baseline;
+    text-align: center;
+
+}
+
+.main .name h2 {
+    color: var(--blue);
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: 'Macondo Swash Caps', sans-serif;
+}
+
+
+.main>h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.web_image img {
+
+    transition: transform 0.7s ease;
+}
+
+.web_image:hover img {
+    transform: rotate(360deg);
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
+}
+
+.connect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.connect a:hover{
+    text-decoration: none;
+   background-color: var(--blue);
+   border-radius: 50%;
+}
+
+@media only screen and (max-width:600px){
+    html{
+        font-size: 62.5%; 
+    }
+}
+
+
+#menu{
+    top: 0;
+    display: none;
+    position: absolute;
+    transition: all 0.5s ease;    
+   
+}
+
+.active{
+    animation: slide 0.5s ease;
+    transform: translateX(0);
+    background-color: rgb(229, 220, 220);
+    height: 100vh;
+    /* width: 100%;
+    color: black;
+    
+    align-items: center;
+    justify-content: center; */
+
+    
+}
+@keyframes slide{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+#menu ul {
+    list-style: none;
+}
