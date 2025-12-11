@@ -1,0 +1,16 @@
+<section class="experience" id="experience">
+    <h2>Experience</h2>
+    {{#each experiences}}
+    <div class="exp-card">
+        <h3>{{title}}</h3>
+        <h4><a href="{{companyUrl}}" target="_blank">{{company}}</a></h4>
+        <p class="date">{{date}}</p>
+        <ul>
+            {{#each responsibilities}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    {{/each}}
+</section>
+

@@ -1,0 +1,179 @@
+/* Experience Section Styles */
+.experience {
+    padding: 6rem 4rem;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.exp-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    text-align: left;
+    max-width: 1200px;
+    margin: 2rem auto;
+    transition: all 0.3s ease;
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.company-image-wrapper {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(109, 162, 212, 0.05);
+    border-radius: 12px;
+    padding: 1rem;
+    border: 1px solid var(--card-border);
+    transition: all 0.3s ease;
+}
+
+.exp-card:hover .company-image-wrapper {
+    border-color: var(--blue);
+    background: rgba(109, 162, 212, 0.1);
+    transform: scale(1.05);
+}
+
+.company-image-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.company-image-link:hover .company-image {
+    transform: scale(1.1);
+}
+
+.exp-content {
+    flex: 1;
+}
+
+.exp-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--blue);
+    box-shadow: 0 12px 40px 0 rgba(109, 162, 212, 0.2);
+}
+
+.exp-card h3 {
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.exp-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.exp-card .date {
+    color: #888;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.exp-card ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.exp-card h4 a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.exp-card h4 a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: var(--gradient-1);
+    transition: width 0.3s ease;
+}
+
+.exp-card h4 a:hover {
+    color: var(--blue);
+}
+
+.exp-card h4 a:hover::after {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .experience {
+        padding: 4rem 2rem;
+    }
+
+    .exp-card {
+        padding: 2rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .company-image-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .exp-content {
+        text-align: left;
+        width: 100%;
+    }
+
+    .exp-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .exp-card h4 {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .experience {
+        padding: 3rem 1.5rem;
+    }
+
+    .exp-card {
+        padding: 1.5rem;
+        flex-direction: column;
+    }
+
+    .company-image-wrapper {
+        width: 80px;
+        height: 80px;
+        padding: 0.75rem;
+    }
+
+    .exp-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .exp-card ul {
+        font-size: 1rem;
+    }
+}
+

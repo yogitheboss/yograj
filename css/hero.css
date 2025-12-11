@@ -1,0 +1,364 @@
+/* Hero Section Styles */
+.main {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 2rem auto;
+    max-width: 1200px;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+    margin-top: calc(4rem + 2rem);
+    padding-top: 2rem;
+}
+
+.main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--blue), transparent);
+}
+
+.main::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--blue), transparent);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    background: transparent;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.name h1 {
+    font-size: 4rem;
+    font-family: 'Macondo Swash Caps', sans-serif;
+    color: var(--blue);
+    margin-bottom: 0.2rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(109, 162, 212, 0.3);
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.name h1 .highlight {
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.name h1 .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient-1);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease;
+}
+
+.name h1:hover .highlight::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.name .pronouns {
+    font-size: 1.4rem;
+    color: #e0e6ed;
+    opacity: 0.8;
+    font-weight: 400;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+}
+
+.tagline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.role {
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #e0e6ed;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+.role .text-gradient {
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.web_image {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.web_image img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+}
+
+.passion {
+    font-size: 1.8rem;
+    color: #e0e6ed;
+    font-weight: 400;
+    line-height: 1.4;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out 0.6s forwards;
+    opacity: 0;
+}
+
+.connect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    border: 2px solid var(--blue);
+    border-radius: 16px;
+    padding: 1.2rem 2rem;
+    background: rgba(109, 162, 212, 0.05);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.connect a {
+    transition: all 0.3s ease;
+    padding: 0.8rem;
+    border-radius: 50%;
+    background: rgba(109, 162, 212, 0.1);
+}
+
+.connect a:hover {
+    transform: translateY(-5px);
+    background: var(--blue);
+    box-shadow: 0 8px 20px rgba(109, 162, 212, 0.3);
+}
+
+.connect a img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.poster_boy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.poster_boy img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 32px rgba(109, 162, 212, 0.2);
+    border: 4px solid var(--blue);
+    background: var(--bg-color);
+    transition: all 0.3s ease;
+}
+
+.poster_boy img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(109, 162, 212, 0.3);
+}
+
+/* Responsive Hero */
+@media screen and (max-width: 950px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: auto;
+        padding-top: 2rem;
+        gap: 2rem;
+    }
+
+    .poster_boy {
+        margin: 1.5rem 0 0 0;
+    }
+
+    .poster_boy img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .text {
+        gap: 10px;
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        padding: 3rem 1.5rem;
+        margin-top: calc(4rem + 1.5rem);
+        padding-top: 1.5rem;
+        margin: 1rem;
+        gap: 1.5rem;
+    }
+
+    .name h1 {
+        font-size: 3rem;
+    }
+
+    .role {
+        font-size: 2rem;
+    }
+
+    .passion {
+        font-size: 1.5rem;
+    }
+
+    .web_image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .connect {
+        gap: 2rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .poster_boy img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        padding-top: 1rem;
+        gap: 1rem;
+    }
+
+    .poster_boy {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 90vw;
+        max-width: 220px;
+    }
+
+    .poster_boy img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .name h1 {
+        font-size: 2rem;
+    }
+
+    .name .pronouns {
+        font-size: 1.1rem;
+    }
+
+    .text {
+        gap: 6px;
+        padding: 0 0.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main {
+        padding: 2rem 1rem;
+        margin-top: calc(4rem + 1rem);
+        padding-top: 1rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        gap: 1rem;
+    }
+
+    .name h1 {
+        font-size: 2.5rem;
+    }
+
+    .role {
+        font-size: 1.8rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .passion {
+        font-size: 1.3rem;
+    }
+
+    .web_image {
+        width: 35px;
+        height: 35px;
+    }
+
+    .connect {
+        gap: 1.5rem;
+        padding: 0.8rem 1.2rem;
+    }
+
+    .connect a {
+        padding: 0.6rem;
+    }
+
+    .connect a img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .poster_boy img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .web_image img {
+        width: 32px;
+        height: 32px;
+    }
+}
+

@@ -1,0 +1,13 @@
+<section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+        {{#each projects}}
+        <div class="project-card">
+            <h3>{{title}}</h3>
+            <p>{{description}}</p>
+            <a href="{{link}}" class="project-link">{{linkText}}</a>
+        </div>
+        {{/each}}
+    </div>
+</section>
+
