@@ -67,20 +67,20 @@ export const portfolioData = {
         {
             title: "Code For Community Website",
             description: "Built using Next.js and Tailwind CSS, serving 100+ members",
-            link: "#",
+            link: "https://codeforcommunity.in/",
             linkText: "Try it here"
         },
         {
             title: "Learning Dashboard",
             description: "MERN stack application with course creation and progress tracking",
-            link: "#",
-            linkText: "Demo"
+            link: "https://www.youtube.com/watch?v=omWB9r672g0",
+            linkText: "Video Demo"
         },
         {
             title: "OrgIt",
             description: "Node.js CLI tool that reduces file arrangement time by 95%",
-            link: "#",
-            linkText: "Try it here"
+            link: "https://github.com/yogitheboss/organise",
+            linkText: "Code"
         }
     ],
     skills: {

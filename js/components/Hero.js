@@ -18,7 +18,12 @@ export class Hero extends Component {
                     ),
                     h('h2', { className: 'pronouns' },
                         h('span', null, pronouns)
-                    )
+                    ),
+                ),
+                h('div', { className: 'tech-stack' },
+                    h('img', { src: './assets/nodejs.svg', alt: 'nodejs' }),
+                    h('img', { src: './assets/react.svg', alt: 'react' }),
+                    h('img', { src: './assets/mongodb.svg', alt: 'mongodb' })
                 ),
                 h('div', { className: 'tagline' },
                     h('h2', { className: 'role' },
@@ -27,7 +32,7 @@ export class Hero extends Component {
                         ),
                         h('span', { className: 'text-gradient' }, role)
                     ),
-                    h('p', { className: 'info' }, 
+                    h('p', { className: 'info' },
                         `${age} years old • ${location}`
                     ),
                     h('p', { className: 'passion' }, tagline)

@@ -201,6 +201,16 @@
     box-shadow: 0 12px 40px rgba(109, 162, 212, 0.3);
 }
 
+.tech-stack {
+    display: flex;
+    gap: 1rem;
+}
+
+.tech-stack img {
+    width: 30px;
+    height: 30px;
+}
+
 /* Responsive Hero */
 @media screen and (max-width: 950px) {
     .main {
@@ -370,4 +380,3 @@
         height: 32px;
     }
 }
-
