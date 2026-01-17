@@ -10,7 +10,7 @@ export const portfolioData = {
         age: "23",
         location: "India",
         tagline: "Building scalable web applications and crafting exceptional digital experiences",
-        about: "I'm a 23-year-old Software Engineer from India, passionate about building web applications and creating meaningful user experiences. Currently pursuing B.Tech in Computer Science at Government Engineering College, Raipur.",
+        about: "I'm a Software Engineer from India specializes in MERN stack and AI, passionate about building web applications and creating meaningful user experiences. Currently working as a Software Engineer at Nyusta Labs.",
         social: {
             linkedin: "https://www.linkedin.com/in/yograj-rajput-205316229/",
             github: "https://www.github.com/yogitheboss",
