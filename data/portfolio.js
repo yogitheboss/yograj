@@ -21,7 +21,8 @@ export const portfolioData = {
         {
             title: "SDE 1",
             company: "Nyusta Labs",
-            companyUrl: "https://thanq.page/",
+            projectUrl:"https://thanq.page/",
+            companyUrl: "https://in.linkedin.com/company/nyusta-labs",
             image: "./assets/thanq-logo.svg", // Add your ThanQ image here
             date: "Present",
             responsibilities: [
@@ -33,6 +34,7 @@ export const portfolioData = {
         {
             title: "Software Engineer Intern",
             company: "User Evaluation Neu Software LLC, Delaware US",
+            projectUrl:"https://userevaluation.com/",
             companyUrl: "https://userevaluation.com/",
             image: "./assets/userevaluation-logo.png", // Add your User Evaluation image here
             date: "May 2023 - Aug 2025",
@@ -50,6 +52,7 @@ export const portfolioData = {
         {
             title: "President",
             company: "Code For Community, GEC Raipur",
+            projectUrl:"https://codeforcommunity.in/",
             companyUrl: "https://codeforcommunity.in/",
             image: "./assets/codeforcommunity.png", // Add your Code For Community image here
             date: "July 2024 - Present",

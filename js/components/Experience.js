@@ -16,7 +16,7 @@ export class Experience extends Component {
             ...experiences.map(exp => 
                 h('div', { className: 'exp-card', key: exp.company },
                     exp.image ? h('div', { className: 'company-image-wrapper' },
-                        h('a', { href: exp.companyUrl || '#', target: '_blank', className: 'company-image-link' },
+                        h('a', { href: exp.projectUrl || '#', target: '_blank', className: 'company-image-link' },
                             h('img', { src: exp.image, alt: exp.company, className: 'company-image' })
                         )
                     ) : null,
