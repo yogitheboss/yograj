@@ -4,11 +4,13 @@
 
 export const portfolioData = {
     personal: {
-        name: "Yograj Rajput",
+        name: "Hi I am Yograj 👋",
         pronouns: "[he / him]",
-        role: "Full Stack Developer",
-        tagline: "Crafting digital experiences with passion and precision",
-        about: "I'm a Full Stack Developer passionate about building web applications and creating meaningful user experiences. Currently pursuing B.Tech in Computer Science at Government Engineering College, Raipur.",
+        role: "Software Engineer",
+        age: "23",
+        location: "India",
+        tagline: "Building scalable web applications and crafting exceptional digital experiences",
+        about: "I'm a 23-year-old Software Engineer from India, passionate about building web applications and creating meaningful user experiences. Currently pursuing B.Tech in Computer Science at Government Engineering College, Raipur.",
         social: {
             linkedin: "https://www.linkedin.com/in/yograj-rajput-205316229/",
             github: "https://www.github.com/yogitheboss",

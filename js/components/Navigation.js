@@ -21,7 +21,6 @@ export class Navigation extends Component {
                     )
                 ),
                 h('ul', { className: 'nav-links' },
-                    h('li', null, h('a', { href: '#home' }, 'Home')),
                     h('li', null, h('a', { href: '#about' }, 'About')),
                     h('li', null, h('a', { href: '#experience' }, 'Experience')),
                     h('li', null, h('a', { href: '#projects' }, 'Projects')),
@@ -30,7 +29,6 @@ export class Navigation extends Component {
             ),
             h('div', { id: 'menu' },
                 h('ul', null,
-                    h('li', null, 'Home'),
                     h('li', null, 'About'),
                     h('li', null, 'Work')
                 )
@@ -71,6 +69,13 @@ export class Navigation extends Component {
                 e.preventDefault();
                 const targetId = anchor.getAttribute('href');
                 const navbarHeight = $('.navbar').offsetHeight;
+                
+                // Immediately update active state on click
+                $$('.nav-links a').forEach(link => {
+                    link.classList.remove('active');
+                });
+                anchor.classList.add('active');
+                
                 scrollToElement(targetId, navbarHeight);
                 
                 // Close mobile menu if open
@@ -88,18 +93,31 @@ export class Navigation extends Component {
             const scrollY = window.pageYOffset;
             const navbarHeight = $('.navbar').offsetHeight;
 
+            // If we're at the top of the page, remove all active states
+            if (scrollY < 100) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+                return;
+            }
+
+            // Find which section is currently in view
+            let currentSection = null;
             sections.forEach(section => {
                 const sectionHeight = section.offsetHeight;
                 const sectionTop = section.offsetTop - navbarHeight - 100;
                 const sectionId = section.getAttribute('id');
 
                 if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                    navLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === `#${sectionId}`) {
-                            link.classList.add('active');
-                        }
-                    });
+                    currentSection = sectionId;
+                }
+            });
+
+            // Update active states based on current section
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (currentSection && link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
                 }
             });
         }, 100);

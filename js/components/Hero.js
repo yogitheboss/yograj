@@ -9,8 +9,7 @@ export class Hero extends Component {
     }
 
     render() {
-        const { name, pronouns, role, tagline, social } = this.props;
-        
+        const { name, pronouns, role, age, location, tagline, social } = this.props;
         return h('section', { className: 'main' },
             h('div', { className: 'text' },
                 h('div', { className: 'name' },
@@ -28,7 +27,10 @@ export class Hero extends Component {
                         ),
                         h('span', { className: 'text-gradient' }, role)
                     ),
-                    h('h2', { className: 'passion' }, tagline)
+                    h('p', { className: 'info' }, 
+                        `${age} years old • ${location}`
+                    ),
+                    h('p', { className: 'passion' }, tagline)
                 ),
                 h('div', { className: 'connect' },
                     h('a', { href: social.linkedin, target: '_blank', 'aria-label': 'LinkedIn' },

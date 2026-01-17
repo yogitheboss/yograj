@@ -39,7 +39,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 1.5rem;
     padding: 0 1rem;
     position: relative;
     z-index: 2;
@@ -52,8 +52,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
 }
 
 .name h1 {
@@ -66,30 +66,7 @@
     animation: fadeInDown 0.8s ease-out;
 }
 
-.name h1 .highlight {
-    background: var(--gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: relative;
-}
 
-.name h1 .highlight::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--gradient-1);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.5s ease;
-}
-
-.name h1:hover .highlight::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
 
 .name .pronouns {
     font-size: 1.4rem;
@@ -104,7 +81,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 0.8rem;
     text-align: center;
 }
 
@@ -121,6 +98,7 @@
 
 .role .text-gradient {
     background: var(--gradient-1);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 600;
@@ -141,11 +119,22 @@
     transition: transform 0.7s ease;
 }
 
-.passion {
-    font-size: 1.8rem;
+.info {
+    font-size: 1.3rem;
     color: #e0e6ed;
     font-weight: 400;
-    line-height: 1.4;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+    animation: fadeInUp 0.8s ease-out 0.5s forwards;
+    opacity: 0;
+    margin: 0;
+}
+
+.passion {
+    font-size: 1.6rem;
+    color: #e0e6ed;
+    font-weight: 400;
+    line-height: 1.5;
     max-width: 600px;
     margin: 0 auto;
     animation: fadeInUp 0.8s ease-out 0.6s forwards;
@@ -156,15 +145,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 2.5rem;
     border: 2px solid var(--blue);
     border-radius: 16px;
-    padding: 1.2rem 2rem;
+    padding: 1rem 1.8rem;
     background: rgba(109, 162, 212, 0.05);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .connect a {
@@ -234,8 +223,12 @@
     }
 
     .text {
-        gap: 10px;
+        gap: 1rem;
         padding: 0 1rem;
+    }
+
+    .info {
+        font-size: 1.2rem;
     }
 }
 
@@ -257,7 +250,11 @@
     }
 
     .passion {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .info {
+        font-size: 1.15rem;
     }
 
     .web_image {
@@ -267,7 +264,7 @@
 
     .connect {
         gap: 2rem;
-        padding: 1rem 1.5rem;
+        padding: 0.9rem 1.4rem;
     }
 
     .poster_boy img {
@@ -303,8 +300,16 @@
     }
 
     .text {
-        gap: 6px;
+        gap: 0.8rem;
         padding: 0 0.5rem;
+    }
+
+    .info {
+        font-size: 1.05rem;
+    }
+
+    .passion {
+        font-size: 1.25rem;
     }
 }
 
@@ -329,7 +334,11 @@
     }
 
     .passion {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+
+    .info {
+        font-size: 1rem;
     }
 
     .web_image {

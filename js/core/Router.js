@@ -18,7 +18,7 @@ class Router {
         });
 
         // Handle initial load
-        this.handleRoute(window.location.hash || '#home');
+        this.handleRoute(window.location.hash );
     }
 
     /**
@@ -40,16 +40,13 @@ class Router {
      * Handle route change
      */
     handleRoute(hash) {
-        const path = hash.replace('#', '') || 'home';
+        const path = hash.replace('#', '') ;
         const route = this.routes.find(r => r.path === path);
 
         if (route) {
             this.currentRoute = path;
             route.handler();
             this.updateActiveNavLink(path);
-        } else {
-            // Default to home if route not found
-            this.navigate('home');
         }
     }
 

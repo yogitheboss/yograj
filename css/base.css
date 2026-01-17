@@ -36,22 +36,9 @@ body {
 section h2 {
     text-align: center;
     font-size: 3rem;
-    margin-bottom: 3rem;
     color: var(--blue);
     position: relative;
     display: inline-block;
-}
-
-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: var(--gradient-1);
-    border-radius: 2px;
 }
 
 /* Animations */

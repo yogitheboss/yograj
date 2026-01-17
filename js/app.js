@@ -37,12 +37,13 @@ class App {
         const nav = new Navigation();
         await nav.mount('body', false);
         this.components.navigation = nav;
-
         // Initialize Hero Section
         const hero = new Hero({
             name: this.data.personal.name,
             pronouns: this.data.personal.pronouns,
             role: this.data.personal.role,
+            age: this.data.personal.age,
+            location: this.data.personal.location,
             tagline: this.data.personal.tagline,
             social: this.data.personal.social
         });
